@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.3.0
+
+### Minor Changes
+
+- Create Countdown component
+
 ## 0.2.0
 
 ### Minor Changes
