@@ -1,30 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Countdown from '$lib/components/countdown/Countdown.svelte';
+	import KonfCountdown from '$lib/components/countdown/KonfCountdown.svelte';
+	import Tile from '$lib/components/tile/Tile.svelte';
+</script>
 
-<nav>
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/about">About</a></li>
-	</ul>
-</nav>
-
-<style lang="scss">
-	nav {
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		li {
-			display: inline-block;
-		}
-
-		a {
-			display: block;
-			padding: 6px 12px;
-			text-decoration: none;
-			color: green;
-		}
-	}
-</style>
+<Tile let:Body>
+	<Body class="text-white">
+		<Countdown from="2024-03-19T12:30:00" zone="Europe/Budapest" let:remaining>
+			<KonfCountdown {remaining} />
+		</Countdown>
+	</Body>
+</Tile>
