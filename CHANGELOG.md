@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.1.2
+
+### Patch Changes
+
+- Add Raleway font
+
 ## 0.1.1
 
 ### Patch Changes
