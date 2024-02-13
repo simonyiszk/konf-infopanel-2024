@@ -14,6 +14,6 @@
 
 <style lang="postcss">
 	:global(body) {
-		@apply font-raleway;
+		@apply font-raleway text-white;
 	}
 </style>
