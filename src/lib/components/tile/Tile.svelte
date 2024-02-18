@@ -70,7 +70,7 @@
 			background: rgb(255, 255, 255);
 			background: linear-gradient(
 				calc(var(--rotation)),
-				rgba(128, 128, 128, 1) 0%,
+				rgba(192, 192, 192, 1) 0%,
 				rgba(0, 212, 255, 0) 20%
 			);
 			background-origin: border-box;
