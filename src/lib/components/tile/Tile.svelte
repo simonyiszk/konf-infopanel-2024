@@ -22,11 +22,38 @@
 	}
 
 	@keyframes -global-sbin {
-		from {
-			--rotation: 150deg;
+		0% {
+			--rotation: 0deg;
 		}
-		to {
-			--rotation: 510deg;
+		10% {
+			--rotation: 10deg;
+		}
+		20% {
+			--rotation: 60deg;
+		}
+		30% {
+			--rotation: 120deg;
+		}
+		40% {
+			--rotation: 170deg;
+		}
+		50% {
+			--rotation: 180deg;
+		}
+		60% {
+			--rotation: 190deg;
+		}
+		70% {
+			--rotation: 240deg;
+		}
+		80% {
+			--rotation: 300deg;
+		}
+		90% {
+			--rotation: 350deg;
+		}
+		100% {
+			--rotation: 360deg;
 		}
 	}
 
