@@ -34,7 +34,7 @@
 		--rotation: 150deg;
 		--border-rounding: 30px;
 
-		@apply overflow-hidden relative p-[1.5px];
+		@apply overflow-hidden relative p-[2px];
 
 		&::before {
 			@apply absolute inset-0;
@@ -48,7 +48,7 @@
 			);
 			background-origin: border-box;
 			background-clip: padding-box, border-box;
-			animation: sbin 4s 0ms infinite linear;
+			animation: sbin 30s 0ms infinite linear;
 		}
 	}
 </style>
