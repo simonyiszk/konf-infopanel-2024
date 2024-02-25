@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.4.0
+
+### Minor Changes
+
+- Add Credits component to layout
+
 ## 0.3.0
 
 ### Minor Changes
