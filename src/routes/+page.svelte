@@ -1,13 +1,17 @@
 <script>
-	import Countdown from '$lib/components/countdown/Countdown.svelte';
-	import KonfCountdown from '$lib/components/countdown/KonfCountdown.svelte';
-	import Tile from '$lib/components/tile/Tile.svelte';
+	const routes = [
+		{ name: 'Main', path: '/main' },
+		{ name: 'Schedule', path: '/schedule' },
+		{ name: 'Rooms', path: '/rooms' }
+	];
 </script>
 
-<Tile let:Body>
-	<Body class="text-white">
-		<Countdown from="2024-03-19T12:30:00" zone="Europe/Budapest" let:remaining>
-			<KonfCountdown {remaining} />
-		</Countdown>
-	</Body>
-</Tile>
+<main class="text-8xl">
+	<ul>
+		{#each routes as route}
+			<li>
+				<a href={route.path} class="hover:text-yellow-300">{route.name}</a>
+			</li>
+		{/each}
+	</ul>
+</main>
