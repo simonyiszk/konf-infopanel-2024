@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.4.2
+
+### Patch Changes
+
+- Add size property to layout to avoid overlapping
+
 ## 0.4.1
 
 ### Patch Changes
