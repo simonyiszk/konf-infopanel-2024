@@ -11,7 +11,7 @@
 
 <style lang="scss">
 	.card-body {
-		@apply h-full w-full p-8 backdrop-blur;
+		@apply size-full p-8 backdrop-blur;
 		border-radius: var(--border-rounding);
 		background: radial-gradient(
 				50.13% 157.63% at 49.87% 50.22%,
@@ -23,7 +23,5 @@
 		box-shadow:
 			0 0 0 1px rgba(255, 255, 255, 0.2),
 			0 2px 15px rgba(255, 255, 255, 0.2);
-		z-index: 1;
-		position: relative;
 	}
 </style>

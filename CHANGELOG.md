@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.4.1
+
+### Patch Changes
+
+- Refactor Room layout view
+
 ## 0.4.0
 
 ### Minor Changes

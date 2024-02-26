@@ -8,25 +8,18 @@
 	export let data: PageData;
 	const { presentations } = data;
 
-	console.log(presentations);
-
 	if (presentations.length === 0) {
 		error(404, 'No presentations found');
 	}
 
 	const selected = presentations[0];
 	const nextPresentation = presentations.at(presentations.indexOf(selected) + 1) ?? null;
-
 	const { presenter } = selected;
 </script>
 
 <Tile let:Body class="size-full">
-	<Body class="size-full">
-		<div class="flex flex-col justify-center items-center h-full">
-			<div class="grid grid-cols-2 gap-16">
-				<PresentationRoom.LeftSide presentation={selected} {nextPresentation} />
-				<PresentationRoom.RightSide {presenter} />
-			</div>
-		</div>
+	<Body class="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-16">
+		<PresentationRoom.LeftSide presentation={selected} {nextPresentation} />
+		<PresentationRoom.RightSide {presenter} />
 	</Body>
 </Tile>
