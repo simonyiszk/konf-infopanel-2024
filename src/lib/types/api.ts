@@ -42,3 +42,12 @@ export interface IndexPageData {
 	presentations: Presentation[];
 	[key: string]: unknown;
 }
+
+export interface Break {
+	slug: string;
+	title: string;
+	room: string;
+	language: string;
+	startTime: Date;
+	endTime: Date;
+}
