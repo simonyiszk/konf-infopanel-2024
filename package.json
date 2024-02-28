@@ -19,6 +19,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "8.56.0",
 		"@types/luxon": "^3.4.2",
+		"@types/siema": "^1.4.11",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.17",
@@ -40,6 +41,7 @@
 	"dependencies": {
 		"clsx": "^2.1.0",
 		"lucide-svelte": "^0.335.0",
-		"luxon": "^3.4.4"
+		"luxon": "^3.4.4",
+		"siema": "^1.5.1"
 	}
 }
