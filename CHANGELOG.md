@@ -1,5 +1,12 @@
 # konf-infopanel-2024
 
+## 0.5.1
+
+### Patch Changes
+
+- 9324f0c: Created draft Main page with carousel.
+- 1816d84: Create "CatchyMinimal" stats tile
+
 ## 0.5.0
 
 ### Minor Changes

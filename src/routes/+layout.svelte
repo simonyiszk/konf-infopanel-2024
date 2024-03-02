@@ -2,6 +2,7 @@
 	import Background from '$lib/components/Background.svelte';
 	import Credits from '$lib/components/Credits.svelte';
 	import '../app.scss';
+	import { version } from '$app/environment';
 </script>
 
 <div class="h-[100svh] w-[100svw]">
@@ -14,7 +15,9 @@
 		</div>
 	</Background>
 	<Credits>
-		<div class="w-32">
+		<div class="w-32 flex flex-row gap-4 justify-end">
+			<!-- svelte-ignore missing-declaration -->
+			<p class="text-xl font-medium">{version}</p>
 			<img class="size-full" src="/schdesign_white.svg" alt="schdesign logo" />
 		</div>
 	</Credits>
