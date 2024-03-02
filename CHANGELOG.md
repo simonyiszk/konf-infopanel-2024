@@ -1,5 +1,12 @@
 # konf-infopanel-2024
 
+## 0.5.0
+
+### Minor Changes
+
+- e14f082: Add Breaks external endpoint
+- Added Siema based carousel component
+
 ## 0.4.2
 
 ### Patch Changes

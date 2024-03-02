@@ -14,6 +14,9 @@ dependencies:
   luxon:
     specifier: ^3.4.4
     version: 3.4.4
+  siema:
+    specifier: ^1.5.1
+    version: 1.5.1
 
 devDependencies:
   '@changesets/cli':
@@ -34,6 +37,9 @@ devDependencies:
   '@types/luxon':
     specifier: ^3.4.2
     version: 3.4.2
+  '@types/siema':
+    specifier: ^1.4.11
+    version: 1.4.11
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.0.0
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -883,6 +889,10 @@ packages:
 
   /@types/semver@7.5.7:
     resolution: {integrity: sha512-/wdoPq1QqkSj9/QOeKkFquEuPzQbHTWAMPH/PaUMB+JuR31lXhlWXRZ52IpfDYVlDOUBvX09uBrPwxGT1hjNBg==}
+    dev: true
+
+  /@types/siema@1.4.11:
+    resolution: {integrity: sha512-bPazsNVnMryrzZx2HiAeDXEpgaO98ToQk0cYJ/7yomLlVNHsn4IYPrLoQ50tQt11FGvkkNoepRyKcTNUhqjj+g==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3):
@@ -3314,6 +3324,10 @@ packages:
       get-intrinsic: 1.2.4
       object-inspect: 1.13.1
     dev: true
+
+  /siema@1.5.1:
+    resolution: {integrity: sha512-BUNFdTSbC9/2gA6r6teBY9B8O/XZOUz8kVyttpsbq4gbHF9PidUDzs6aPtiObhV4KoEuPQdhRvK5hPPi9lgSTg==}
+    dev: false
 
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
