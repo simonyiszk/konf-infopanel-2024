@@ -97,7 +97,7 @@
 </script>
 
 <div class="carousel">
-	<div class="slides" bind:this={siema}>
+	<div class="slides h-full" bind:this={siema}>
 		<slot />
 	</div>
 	{#if controls}
