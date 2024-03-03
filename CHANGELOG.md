@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.6.1
+
+### Patch Changes
+
+- Update NPM packages
+
 ## 0.6.0
 
 ### Minor Changes
