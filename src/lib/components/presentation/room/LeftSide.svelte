@@ -5,6 +5,7 @@
 
 	import { MoveRight } from 'lucide-svelte';
 	import DynamicSizeTitle from '$lib/components/DynamicSizeTitle.svelte';
+	import clsx from 'clsx';
 
 	export let presentation: Presentation & { startTimeLocal: string; endTimeLocal: string };
 	export let nextPresentation: Presentation | null;
@@ -29,9 +30,14 @@
 
 <div class="col-span-1 flex flex-col justify-between order-1 xl:order-2">
 	<div class="flex flex-col gap-4">
-		<DynamicSizeTitle text={title} let:size>
-			<h1 style="font-size: {size};" class="text-white font-bold">{title}</h1>
-		</DynamicSizeTitle>
+		<h1
+			class={clsx(
+				'text-white font-bold hyphens-auto',
+				title.length > 55 ? 'text-xl lg:text-6xl' : 'text-2xl lg:text-8xl'
+			)}
+		>
+			{title}
+		</h1>
 		<p class="xl:text-5xl text-3xl text-white font-medium">{room}</p>
 		<PlaybackBar
 			startTime={startTimeLocal}

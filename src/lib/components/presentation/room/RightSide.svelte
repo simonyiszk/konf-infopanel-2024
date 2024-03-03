@@ -15,7 +15,7 @@
 	>
 		<h2 class="text-2xl xl:text-6xl text-center w-full font-bold">{presenter.name}</h2>
 		<div class="text-md xl:text-4xl flex gap-2 flex-wrap justify-center">
-			<span>
+			<span class="text-center">
 				{[presenter.rank, presenter.company?.name].filter((e) => !!e).join(' - ')}
 			</span>
 		</div>
