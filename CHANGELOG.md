@@ -1,5 +1,12 @@
 # konf-infopanel-2024
 
+## 0.6.2
+
+### Patch Changes
+
+- c14064a: Exposed all API resources to the client.
+  Added giveaway items on main page.
+
 ## 0.6.1
 
 ### Patch Changes

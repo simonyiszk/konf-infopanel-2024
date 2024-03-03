@@ -2,13 +2,18 @@ import { BACKEND_URL } from '$env/static/private';
 import { error } from '@sveltejs/kit';
 import type { Break, IndexPageData } from '$lib/types/api';
 
-export async function getPresentations() {
+export async function getConferenceData() {
 	const res = await fetch(`${BACKEND_URL}/conference/index`);
 	if (!res.ok) {
 		console.error(res);
-		error(500, 'Failed to fetch presentations');
+		error(500, 'Failed to fetch conference data');
 	}
 	const data = (await res.json()) as IndexPageData;
+	return data;
+}
+
+export async function getPresentations() {
+	const data = await getConferenceData();
 
 	return data.presentations.sort((a, b) =>
 		new Date(a.startTime).getTime() > new Date(b.startTime).getTime() ? 1 : -1
