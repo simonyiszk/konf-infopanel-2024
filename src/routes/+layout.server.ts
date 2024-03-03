@@ -1,9 +1,9 @@
-import { getPresentations } from '$lib/server/load';
+import { getConferenceData } from '$lib/server/load';
 
 export const load = async () => {
-	const presentations = await getPresentations();
+	const data = await getConferenceData();
 
 	return {
-		presentations
+		...data
 	};
 };
