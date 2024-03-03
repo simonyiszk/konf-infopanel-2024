@@ -7,6 +7,8 @@
 
 	import Carousel from '$lib/components/carousel-diy';
 	import CatchyMinimal from '$lib/components/tile/CatchyMinimal.svelte';
+	import MobileApp from '$lib/components/tile/MobileApp.svelte';
+	import Tile from '$lib/components/tile/Tile.svelte';
 
 	const catchyInfo = [
 		{ text: '21', lower: 'előadás' },
@@ -17,21 +19,21 @@
 
 <div class="size-full flex flex-col justify-center items-center">
 	<Carousel.SiemaWrapper
-		autoplay={15 * 1000}
+		autoplay={dev ? 0 : 15 * 1000}
 		perPage={1}
 		dots={dev}
 		draggable={dev}
 		controls={false}
 	>
 		<div class="flex flex-col justify-center items-center gap-4">
-			<img src="/konf_logo.svg" alt="Konf logo" />
-			<span class="text-6xl text-center font-bold"
+			<img src="/konf_logo.svg" alt="Konf logo" class="size-full object-contain" />
+			<span class="text-3xl lg:text-6xl text-center font-bold"
 				>Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai
 				konferenciája.</span
 			>
-			<span class="text-5xl">konferencia.simonyi.bme.hu</span>
+			<span class="text-2xl lg:text-5xl">konferencia.simonyi.bme.hu</span>
 		</div>
-		<div class="flex flex-col justify-center items-center size-full">
+		<div class="flex flex-col justify-center items-center size-full mx-auto max-w-screen-2xl">
 			<div
 				class="grid gap-8 size-full justify-center items-center grid-cols-1 lg:grid-cols-3 grid-rows-3"
 			>
@@ -45,6 +47,9 @@
 					<CatchyMinimal text={e.text} lower={e.lower} />
 				{/each}
 			</div>
+		</div>
+		<div class="mx-auto max-w-screen-2xl flex flex-col justify-center items-center h-full">
+			<MobileApp />
 		</div>
 	</Carousel.SiemaWrapper>
 </div>
