@@ -1,5 +1,16 @@
 # konf-infopanel-2024
 
+## 0.6.0
+
+### Minor Changes
+
+- 59d9c3c: Added carousel to the bottom of the screen.
+
+### Patch Changes
+
+- 960c584: Adjusted paddings and title sizes.
+- 7f6653c: Added Mobile app page ad to main page carousel.
+
 ## 0.5.1
 
 ### Patch Changes
