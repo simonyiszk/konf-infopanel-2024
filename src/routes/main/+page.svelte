@@ -36,7 +36,9 @@
 				konferenciája.</span
 			>
 			<img src="/qr-konf.png" alt="QR code" class="size-[15%] invert mt-8" />
-			<span class="text-2xl lg:text-3xl text-neutral-300" style="font-variant: small-caps;">konferencia.simonyi.bme.hu</span>
+			<span class="text-2xl lg:text-3xl text-neutral-300" style="font-variant: small-caps;"
+				>konferencia.simonyi.bme.hu</span
+			>
 		</div>
 		<div class="flex flex-col justify-center items-center size-full mx-auto max-w-screen-2xl">
 			<div

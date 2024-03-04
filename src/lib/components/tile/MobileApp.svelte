@@ -18,6 +18,10 @@
 					</p>
 				</div>
 				<div class="w-full flex flex-row justify-start lg:gap-10 gap-4 items-center mt-4">
+					<div>
+						change me
+						<img class="w-48 rounded-md invert" src="/qr-konf.png" alt="QR code" />
+					</div>
 					<a href={androidUrl} class="h-fit">
 						<img class="h-[57px]" src="google-play-badge-hu.png" alt="Play Store" />
 					</a>
