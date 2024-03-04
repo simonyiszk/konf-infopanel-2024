@@ -29,13 +29,14 @@
 		draggable={dev}
 		controls={false}
 	>
-		<div class="flex flex-col justify-center items-center gap-4">
+		<div class="flex flex-col justify-center items-center gap-4 mx-auto max-w-screen-2xl">
 			<img src="/konf_logo.svg" alt="Konf logo" class="size-full object-contain" />
 			<span class="text-3xl lg:text-6xl text-center font-bold"
 				>Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai
 				konferenciája.</span
 			>
-			<span class="text-2xl lg:text-5xl">konferencia.simonyi.bme.hu</span>
+			<img src="/qr-konf.png" alt="QR code" class="size-[15%] invert mt-8" />
+			<span class="text-2xl lg:text-3xl text-neutral-300" style="font-variant: small-caps;">konferencia.simonyi.bme.hu</span>
 		</div>
 		<div class="flex flex-col justify-center items-center size-full mx-auto max-w-screen-2xl">
 			<div

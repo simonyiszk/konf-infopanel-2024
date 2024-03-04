@@ -14,8 +14,7 @@
 				<div>
 					<h2 class="text-7xl font-bold">KonferenciApp</h2>
 					<p class="text-stone-200 text-5xl whitespace-pre-line w-full h-full items-center">
-						Töltsd le a mobil appot, hogy élőben követhesd a konferencia eseményeit és kérdezhess az
-						előadóktól!
+						Töltsd le a mobil appot, hogy élőben követhesd a konferencia eseményeit és kérdezhess az előadóktól!
 					</p>
 				</div>
 				<div class="w-full flex flex-row justify-start lg:gap-10 gap-4 items-center mt-4">

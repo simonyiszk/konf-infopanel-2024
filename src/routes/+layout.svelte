@@ -15,9 +15,9 @@
 		</div>
 	</Background>
 	<Credits>
-		<div class="w-32 flex flex-row gap-4 justify-end">
+		<div class="w-32 flex flex-row gap-4 justify-end opacity-70">
 			<!-- svelte-ignore missing-declaration -->
-			<p class="text-xl font-medium">{version}</p>
+			<p class="text-xl font-medium"><span class="text-base">v</span>{version}</p>
 			<img class="size-full" src="/schdesign_white.svg" alt="schdesign logo" />
 		</div>
 	</Credits>

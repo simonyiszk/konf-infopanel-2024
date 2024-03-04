@@ -1,3 +1,3 @@
-<div class="absolute bottom-0 right-0 z-50 p-2">
+<div class="fixed bottom-2 right-4 z-50 p-2">
 	<slot />
 </div>
