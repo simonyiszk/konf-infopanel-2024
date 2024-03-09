@@ -7,7 +7,7 @@
 	export let data: PageData;
 	const { presentations } = data;
 
-	const bosch = presentations.find((p) => p.presenter.company?.name === 'Bosch');
+	const bosch = presentations.find((p) => p.presenter.company?.name.includes('Bosch'));
 
 	let ib025 = presentations.filter((p) => p.room === 'IB025');
 	let ib028 = presentations.filter((p) => p.room === 'IB028');
@@ -22,7 +22,12 @@
 <div class="flex flex-col justify-center items-center h-full">
 	<div class="grid grid-cols-12 w-full">
 		<div class="col-span-11">
-			<Carousel.SiemaWrapper autoplay={3 * 1000} perPage={2} dots={false} draggable={dev}>
+			<Carousel.SiemaWrapper
+				autoplay={dev ? 3 * 1000 : 6 * 1000}
+				perPage={2}
+				dots={false}
+				draggable={dev}
+			>
 				{#each c as pre}
 					<div class="flex flex-col gap-8">
 						{#each pre as p}
