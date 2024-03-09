@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.7.0
+
+### Minor Changes
+
+- Implement schedule page
+
 ## 0.6.2
 
 ### Patch Changes
