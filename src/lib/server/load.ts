@@ -9,15 +9,23 @@ export async function getConferenceData() {
 		error(500, 'Failed to fetch conference data');
 	}
 	const data = (await res.json()) as IndexPageData;
-	return data;
+	return {
+		...data,
+		presentations: data.presentations
+			.map((e) => {
+				return {
+					...e,
+					startTime: new Date(e.startTime),
+					endTime: new Date(e.endTime)
+				};
+			})
+			.sort((a, b) => (a.startTime.getTime() > b.startTime.getTime() ? 1 : -1))
+	};
 }
 
 export async function getPresentations() {
 	const data = await getConferenceData();
-
-	return data.presentations.sort((a, b) =>
-		new Date(a.startTime).getTime() > new Date(b.startTime).getTime() ? 1 : -1
-	);
+	return data.presentations;
 }
 
 export async function getBreaks() {
