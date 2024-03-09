@@ -4,12 +4,11 @@
 	import { onMount } from 'svelte';
 
 	import { MoveRight } from 'lucide-svelte';
-	import DynamicSizeTitle from '$lib/components/DynamicSizeTitle.svelte';
 	import clsx from 'clsx';
 
-	export let presentation: Presentation & { startTimeLocal: string; endTimeLocal: string };
-	export let nextPresentation: Presentation | null;
-	const { title, room, startTime, endTime, language, startTimeLocal, endTimeLocal } = presentation;
+	export let presentation: Presentation;
+	export let nextPresentation: Presentation | null = null;
+	const { title, room, startTime, endTime } = presentation;
 
 	let time = new Date();
 
@@ -23,9 +22,7 @@
 		};
 	});
 
-	$: progress =
-		(time.getTime() - new Date(startTime).getTime()) /
-		(new Date(endTime).getTime() - new Date(startTime).getTime());
+	$: progress = (time.getTime() - startTime.getTime()) / (endTime.getTime() - startTime.getTime());
 </script>
 
 <div class="col-span-1 flex flex-col justify-between order-1 xl:order-2">
@@ -40,8 +37,14 @@
 		</h1>
 		<p class="xl:text-5xl text-3xl text-white font-medium">{room}</p>
 		<PlaybackBar
-			startTime={startTimeLocal}
-			endTime={endTimeLocal}
+			startTime={startTime.toLocaleTimeString('hu', {
+				hour: '2-digit',
+				minute: '2-digit'
+			})}
+			endTime={endTime.toLocaleTimeString('hu', {
+				hour: '2-digit',
+				minute: '2-digit'
+			})}
 			progress={progress * 100}
 			type="alternative"
 		/>

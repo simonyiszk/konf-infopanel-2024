@@ -40,8 +40,8 @@ export interface Presentation {
 	presenter: Presenter;
 	room: 'IB028' | 'IB025';
 	language: 'en' | 'hu';
-	startTime: string;
-	endTime: string;
+	startTime: Date;
+	endTime: Date;
 	description: string;
 	questionsUrl: string; // még kérdéses, hogy így lesz-e
 	imageUrls?: string[];
