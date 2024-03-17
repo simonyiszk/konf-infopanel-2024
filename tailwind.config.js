@@ -5,6 +5,9 @@ export default {
 		extend: {
 			fontFamily: {
 				raleway: ['Raleway', 'sans-serif']
+			},
+			maxWidth: {
+				"screen-3xl": "1920px"
 			}
 		}
 	},

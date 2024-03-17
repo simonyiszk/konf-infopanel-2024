@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.7.2
+
+### Patch Changes
+
+- Limit max width to 1920px.
+
 ## 0.7.1
 
 ### Patch Changes
