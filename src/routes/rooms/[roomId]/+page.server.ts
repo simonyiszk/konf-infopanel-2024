@@ -30,16 +30,5 @@ export const load: PageServerLoad = async (context) => {
 		presentations: presentations
 			.filter((presentation) => presentation.room === selectedRoom.room)
 			.sort((a, b) => (new Date(a.startTime) > new Date(b.startTime) ? 1 : -1))
-			.map((presentation) => ({
-				...presentation,
-				startTimeLocal: new Date(presentation.startTime).toLocaleTimeString('hu', {
-					hour: 'numeric',
-					minute: 'numeric'
-				}),
-				endTimeLocal: new Date(presentation.endTime).toLocaleTimeString('hu', {
-					hour: 'numeric',
-					minute: 'numeric'
-				})
-			}))
 	};
 };
