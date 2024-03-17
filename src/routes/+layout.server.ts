@@ -15,9 +15,8 @@ export const load = async () => {
 
 		const pres = [ib028, ib025].flatMap((room) => {
 			return room.map((p, i) => {
-				const long = p.endTime.getTime() - p.startTime.getTime() > 1000 * 31 * 60;
-				const start = new Date(now.getTime() + i * 1000 * 60 * 0.5);
-				const end = new Date(now.getTime() + (i + (long ? 2 : 1)) * 1000 * 60 * 0.5);
+				const start = new Date(now.getTime() + i * 1000 * 60 * 0.1);
+				const end = new Date(now.getTime() + (i + 1) * 1000 * 60 * 0.1);
 
 				return {
 					...p,
