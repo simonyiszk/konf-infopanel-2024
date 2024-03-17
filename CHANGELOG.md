@@ -1,5 +1,11 @@
 # konf-infopanel-2024
 
+## 0.7.1
+
+### Patch Changes
+
+- Add loading screen for presentation room page.
+
 ## 0.7.0
 
 ### Minor Changes

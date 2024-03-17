@@ -1,6 +1,6 @@
 {
 	"name": "konf-infopanel-2024",
-	"version": "0.7.0",
+	"version": "0.7.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
