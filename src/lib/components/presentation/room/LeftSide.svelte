@@ -30,7 +30,7 @@
 		<h1
 			class={clsx(
 				'text-white font-bold hyphens-auto',
-				title.length > 55 ? 'text-xl lg:text-6xl' : 'text-2xl lg:text-8xl'
+				title.length > 52 ? 'text-xl lg:text-6xl' : 'text-2xl lg:text-8xl'
 			)}
 		>
 			{title}

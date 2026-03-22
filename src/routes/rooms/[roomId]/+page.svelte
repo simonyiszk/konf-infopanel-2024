@@ -11,7 +11,7 @@
 	import KonfCountdown from '$lib/components/countdown/KonfCountdown.svelte';
 
 	export let data: PageData;
-	const { presentations } = data;
+	const { presentations, konfStartdate } = data;
 
 	if (presentations.length === 0) {
 		error(404, 'No presentations found');
@@ -55,7 +55,7 @@
 </svelte:head>
 
 <Tile let:Body class="size-full">
-	{#if selected && selected.presenter}
+	{#if selected && !selected.title.includes('Szünet')}
 		<Body class="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-16">
 			{#key selected}
 				<PresentationRoom.LeftSide presentation={selected} {nextPresentation} />
@@ -64,9 +64,9 @@
 		</Body>
 	{:else}
 		<Body class="flex flex-col size-full justify-center items-center">
-			<img src="/konf_logo.svg" class="size-full object-contain" alt="Astronaut" />
+			<img src="/konf_logo.svg" class="size-full object-contain" alt="Logo" />
 			{#if presentations[0].startTime.getTime() > new Date().getTime()}
-				<Countdown from="2024-03-19T12:30:00" zone="Europe/Budapest" let:remaining>
+				<Countdown from={konfStartdate} zone="Europe/Budapest" let:remaining>
 					<KonfCountdown {remaining} />
 				</Countdown>
 			{/if}
