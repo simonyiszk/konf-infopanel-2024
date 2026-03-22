@@ -13,7 +13,7 @@
 			<div>
 				<div>
 					<h2 class="text-7xl font-bold">KonferenciApp</h2>
-					<p class="text-stone-200 text-5xl whitespace-pre-line w-full h-full items-center">
+					<p class="text-stone-200 text-5xl w-full h-full items-center">
 						Töltsd le a mobil appot, hogy élőben követhesd a konferencia eseményeit és kérdezhess az
 						előadóktól!
 					</p>

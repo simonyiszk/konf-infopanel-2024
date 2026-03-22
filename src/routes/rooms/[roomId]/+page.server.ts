@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import type { Presentation } from '$lib/types/api';
 import { error } from '@sveltejs/kit';
+import { getKonfStartdate } from '$lib/server/load';
 
 const rooms = [
 	{
@@ -19,6 +20,7 @@ const rooms = [
 export const load: PageServerLoad = async (context) => {
 	const slug = context.params.roomId;
 	const presentations = (await context.parent()).presentations;
+	const konfStartdate = await getKonfStartdate();
 
 	const selectedRoom = rooms.find((room) => room.slug === slug);
 
@@ -29,6 +31,7 @@ export const load: PageServerLoad = async (context) => {
 	return {
 		presentations: presentations
 			.filter((presentation) => presentation.room === selectedRoom.room)
-			.sort((a, b) => (new Date(a.startTime) > new Date(b.startTime) ? 1 : -1))
+			.sort((a, b) => (new Date(a.startTime) > new Date(b.startTime) ? 1 : -1)),
+		konfStartdate: konfStartdate
 	};
 };

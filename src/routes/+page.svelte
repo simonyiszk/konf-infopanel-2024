@@ -1,6 +1,6 @@
 <script>
 	const routes = [
-		// { name: 'Main', path: '/main' },
+		{ name: 'Main', path: '/main' },
 		{ name: 'Schedule', path: '/schedule' },
 		{ name: 'Rooms', path: '/rooms' }
 	];

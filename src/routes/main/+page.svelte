@@ -11,9 +11,10 @@
 	import Tile from '$lib/components/tile/Tile.svelte';
 
 	const catchyInfo = [
-		{ text: '21', lower: 'előadás' },
-		{ text: '21', lower: 'kiállító az expón' },
-		{ text: '21', lower: 'év tapasztalat' }
+		{ src: '/nyeremeny/lenovo_ideatab.webp', lower: 'Lenovo Idea Tab tablet' },
+		{ src: '/nyeremeny/muvolgy.svg', lower: 'Páros napijegy a 2026-os Művészetek Völgyére' },
+		{ src: '/nyeremeny/lg_27g411a-b.webp', lower: 'LG UltraGear 27" 144Hz monitor' },
+		{ src: '/nyeremeny/jbl_tunebuds2.webp', lower: 'JBL Tune Buds 2 vezeték nélküli fülhallgató' }
 	];
 </script>
 
@@ -30,7 +31,7 @@
 		controls={false}
 	>
 		<div class="flex flex-col justify-center items-center gap-4">
-			<img src="/konf_logo.svg" alt="Konf logo" class="size-full object-contain" />
+			<img src="/konf_logo.svg" alt="Konf logo" class="size-full w-[60%] object-contain" />
 			<span class="text-3xl lg:text-6xl text-center font-bold"
 				>Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai
 				konferenciája.</span
@@ -39,43 +40,25 @@
 		</div>
 		<div class="flex flex-col justify-center items-center size-full mx-auto max-w-screen-2xl">
 			<div
-				class="grid gap-8 size-full justify-center items-center grid-cols-1 lg:grid-cols-3 grid-rows-3"
+				class="grid gap-8 size-full justify-center items-center grid-cols-1 lg:grid-cols-3 grid-rows-2"
 			>
-				{#each catchyInfo as e}
-					<CatchyMinimal text={e.text} lower={e.lower} />
-				{/each}
-				<Tile let:Body class="col-span-2 row-span-2 h-full">
+				<Tile let:Body class="col-span-2 row-span-1 h-full">
 					<Body class="grid grid-cols-2">
-						<div>
+						<div class="col-span-2">
 							<h2 class="text-6xl font-bold mb-4">{giveaway.sectionTitle}</h2>
 							<div class="flex flex-col gap-2">
 								{#each giveaway.description.split('***') as section, i}
 									<p class="text-4xl" class:font-bold={i == 1} class:text-yellow-300={i == 1}>
-										{section}
+										{section}<br />
 									</p>
 								{/each}
 							</div>
 						</div>
-						<div>
-							<img src={giveaway.pictureUrl} alt="Nintendo" />
-						</div>
 					</Body>
 				</Tile>
-				<Tile let:Body class="h-full row-span-2">
-					<Body class="flex flex-col justify-between gap-16">
-						<div class="size-full relative">
-							{#each Array.from(Array(3).keys()) as e, i}
-								<div
-									class="voucher"
-									style="--max-shift: {i * -20}px; --final-rotation: -{(2 - i) * 5}deg;"
-								>
-									<img src="/mediamarkt_utalvany.png" alt="Nintendo" />
-								</div>
-							{/each}
-						</div>
-						<p class="text-center text-3xl font-bold">3 x 15 000 Ft értékű MediaMarkt utalvány</p>
-					</Body>
-				</Tile>
+				{#each catchyInfo as e}
+					<CatchyMinimal src={e.src} lower={e.lower} />
+				{/each}
 			</div>
 		</div>
 		<div class="mx-auto max-w-screen-2xl flex flex-col justify-center items-center h-full">
