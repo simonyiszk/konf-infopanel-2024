@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let color: string = 'black';
+	export let color: string = '#412B1C';
 	export let image: string = '';
 </script>
 
@@ -12,7 +12,7 @@
 		@apply size-full;
 		background-color: var(--color);
 		background-size: cover;
-		background-position: center;
+		background-position: bottom;
 		background-repeat: no-repeat;
 		z-index: -1;
 	}

@@ -13,6 +13,6 @@
 <style lang="scss">
 	.progress {
 		transform: translateX(calc(-100% + var(--progress-bar-transform)));
-		@apply bg-yellow-300 h-full w-full;
+		@apply bg-[#EA7217] h-full w-full;
 	}
 </style>

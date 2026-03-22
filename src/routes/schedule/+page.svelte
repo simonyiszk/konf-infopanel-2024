@@ -7,7 +7,7 @@
 	export let data: PageData;
 	const { presentations } = data;
 
-	const bosch = presentations.find((p) => p.presenter.company?.name.includes('Bosch'));
+	const bosch = presentations.find((p) => p.presenter?.company?.name.includes('Bosch'));
 
 	let ib025 = presentations.filter((p) => p.room === 'IB025');
 	let ib028 = presentations.filter((p) => p.room === 'IB028');
@@ -34,9 +34,9 @@
 							<div class="row-span-1 grid grid-cols-3 gap-4 p-2">
 								<div>
 									<img
-										class="size-full object-cover rounded-2xl"
-										src={p.presenter.pictureUrl}
-										alt={p.presenter.name}
+										class="w-full aspect-square object-cover rounded-2xl"
+										src={p.presenter?.pictureUrl ?? '/blank.png'}
+										alt={p.presenter?.name ?? ''}
 									/>
 								</div>
 								<div class="col-span-2">
@@ -48,9 +48,9 @@
 									>
 										{p.title}
 									</h1>
-									<p class="text-3xl">{p.presenter.name}</p>
-									{#if p.presenter.company}
-										<p class="text-2xl">{p.presenter.company.name}</p>
+									<p class="text-3xl">{p.presenter?.name ?? ''}</p>
+									{#if p.presenter?.company}
+										<p class="text-2xl">{p.presenter?.company.name}</p>
 									{/if}
 								</div>
 							</div>

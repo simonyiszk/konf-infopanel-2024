@@ -37,7 +37,7 @@ export interface Presenter {
 export interface Presentation {
 	slug: string;
 	title: string;
-	presenter: Presenter;
+	presenter?: Presenter;
 	room: 'IB028' | 'IB025';
 	language: 'en' | 'hu';
 	startTime: Date;
