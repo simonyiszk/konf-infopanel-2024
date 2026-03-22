@@ -18,10 +18,12 @@ export async function getConferenceData() {
 		...data,
 		presentations: (data.presentations as RawPresentation[])
 			.map((e) => {
+				const [startHours, startMins] = e.startTime.split(':').map(Number);
+				const [endHours, endMins] = e.endTime.split(':').map(Number);
 				return {
 					...e,
-					startTime: new Date(e.startTime),
-					endTime: new Date(e.endTime)
+					startTime: new Date(new Date().setHours(startHours, startMins)),
+					endTime: new Date(new Date().setHours(endHours, endMins))
 				};
 			})
 			.sort((a, b) => (a.startTime.getTime() > b.startTime.getTime() ? 1 : -1))
