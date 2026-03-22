@@ -1,4 +1,4 @@
-import { BACKEND_URL, KONF_STARTDATE } from '$env/static/private';
+import { BACKEND_URL, KONF_STARTDATE, KONF_STARTTIME, CURRENT_GMT_OFFSET } from '$env/static/private';
 import { error } from '@sveltejs/kit';
 import type { Break, IndexPageData, Presentation } from '$lib/types/api';
 
@@ -18,12 +18,10 @@ export async function getConferenceData() {
 		...data,
 		presentations: (data.presentations as RawPresentation[])
 			.map((e) => {
-				const [startHours, startMins] = e.startTime.split(':').map(Number);
-				const [endHours, endMins] = e.endTime.split(':').map(Number);
 				return {
 					...e,
-					startTime: new Date(new Date(KONF_STARTDATE).setHours(startHours, startMins)),
-					endTime: new Date(new Date(KONF_STARTDATE).setHours(endHours, endMins))
+					startTime: new Date(`${KONF_STARTDATE}T${e.startTime}:00.000${CURRENT_GMT_OFFSET}`),
+					endTime: new Date(`${KONF_STARTDATE}T${e.endTime}:00.000${CURRENT_GMT_OFFSET}`)
 				};
 			})
 			.sort((a, b) => (a.startTime.getTime() > b.startTime.getTime() ? 1 : -1))
@@ -46,5 +44,5 @@ export async function getBreaks() {
 }
 
 export async function getKonfStartdate() {
-	return KONF_STARTDATE;
+	return `${KONF_STARTDATE}T${KONF_STARTTIME}.000${CURRENT_GMT_OFFSET}`;
 }
