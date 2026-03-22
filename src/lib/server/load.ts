@@ -20,8 +20,8 @@ export async function getConferenceData() {
 			.map((e) => {
 				return {
 					...e,
-					startTime: new Date(`${KONF_STARTDATE}T${e.startTime}:00.000${CURRENT_GMT_OFFSET}`),
-					endTime: new Date(`${KONF_STARTDATE}T${e.endTime}:00.000${CURRENT_GMT_OFFSET}`)
+					startTime: new Date(`${KONF_STARTDATE}T${e.startTime}:00.000Z`),
+					endTime: new Date(`${KONF_STARTDATE}T${e.endTime}:00.000Z`)
 				};
 			})
 			.sort((a, b) => (a.startTime.getTime() > b.startTime.getTime() ? 1 : -1))
@@ -44,5 +44,5 @@ export async function getBreaks() {
 }
 
 export async function getKonfStartdate() {
-	return `${KONF_STARTDATE}T${KONF_STARTTIME}.000${CURRENT_GMT_OFFSET}`;
+	return `${KONF_STARTDATE}T${KONF_STARTTIME}:00.000Z`;
 }
